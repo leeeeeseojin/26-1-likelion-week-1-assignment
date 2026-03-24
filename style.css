@@ -1,0 +1,149 @@
+/* 변수 */
+:root {
+  --color-bg: #f6f7fa;
+  --color-box: #ffffff;
+  --color-part: #526bee;
+  --color-text: #1a1a1a;
+  --radius-card: 16px;
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 10px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* 기본 설정 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--color-part);
+}
+
+/* 전체 페이지 레이아웃 */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* 자기소개 요약 카드 */
+.summary {
+  display: flex;
+}
+
+.summary__profile {
+  background-color: var(--color-box);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+
+  padding: 24px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary__profile:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.summary__profile-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.summary__name {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.summary__part {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-part);
+}
+
+.summary__detail {
+  font-size: 14px;
+}
+
+/* 상세 자기소개 카드 */
+.detail {
+  background-color: var(--color-box);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.detail__title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--color-text);
+}
+
+.detail__name {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.detail__part {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-part);
+}
+
+.detail__club {
+  font-size: 17px;
+  color: #717171;
+  margin-bottom: 20px;
+}
+
+/* 각 블록 */
+.detail__block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.detail__block__title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.detail__block__content {
+  font-size: 14px;
+}
+
+.detail__block__list {
+  display: flex;
+  list-style-position: inside;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail__block__list li {
+  font-size: 14px;
+}
